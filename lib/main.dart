@@ -32,19 +32,36 @@ class MyHomePage extends StatelessWidget {
           width: 100,
           height: 100,
           color: Colors.deepPurple,
-          child: Center(
-            child: Text(
-              'Hello World',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
+            // Also there is a possibility to add padding directly to container:
+            // padding: const EdgeInsets.all(8.0);
+            // If Container has a child but no `height`, no `width`,
+            // child sizes itself to match the size of parent.
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              color: Colors.yellow,
             ),
-          ),
+          )
         ),
       ),
+      // body: Center(
+      //   child: Container(
+      //     width: 100,
+      //     height: 100,
+      //     color: Colors.deepPurple,
+      //     child: Center(
+      //       child: Text(
+      //         'Hello World',
+      //         textAlign: TextAlign.center,
+      //         style: TextStyle(
+      //           color: Colors.white,
+      //           fontSize: 24,
+      //           fontWeight: FontWeight.bold,
+      //         ),
+      //       ),
+      //     ),
+      //   ),
+      // ),
     );
   }
 }
