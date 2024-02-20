@@ -26,23 +26,62 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // return Scaffold(
+    //   body: Center(
+    //     child: Row(
+    //       children: [
+    //         Expanded(
+    //           child: Container(
+    //             color: Colors.yellow,
+    //           ),
+    //         ),
+    //         Expanded(
+    //           flex: 2,
+    //           child: Container(
+    //             color: Colors.blue,
+    //           ),
+    //         ),
+    //         Expanded(
+    //           flex: 4,
+    //           child: Container(
+    //             color: Colors.green,
+    //           ),
+    //         ),
+    //       ],
+    //     ),
+    //   ),
+    // );
+
     return Scaffold(
       body: Center(
-        child: Container(
-          width: 100,
-          height: 100,
-          color: Colors.deepPurple,
-          child: Center(
-            child: Text(
-              'Hello World',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+        child: Stack(
+          children: [
+            Align(
+              alignment: Alignment.center,
+              child: Container(
+                width: 200,
+                height: 200,
+                color: Colors.yellow,
               ),
             ),
-          ),
+            Align(
+              alignment: Alignment.centerRight,
+              child: Container(
+                width: 150,
+                height: 150,
+                color: Colors.blue,
+              ),
+            ),
+            Positioned(
+              bottom: 50,
+              right: 50,
+              child: Container(
+                width: 100,
+                height: 100,
+                color: Colors.green,
+              ),
+            ),
+          ],
         ),
       ),
     );
