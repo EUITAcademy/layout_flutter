@@ -28,21 +28,81 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          width: 100,
-          height: 100,
-          color: Colors.deepPurple,
-          child: Center(
-            child: Text(
-              'Hello World',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  // If we have decoration, we must provide color in decoration!
+                  decoration: BoxDecoration(
+                    color: Colors.purple,
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    border: Border.all(
+                      width: 2,
+                      color: Colors.black,
+                    ),
+                  ),
+                  width: 50,
+                  height: 50,
+                ),
+                Container(
+                  width: 120,
+                  height: 120,
+                  color: Colors.yellow,
+                  child: Center(
+                    child: Text(
+                      'Yellow container',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.purple),
+                    ),
+                  ),
+                ),
+                Container(
+                  // If we have decoration, we must provide color in decoration!
+                  decoration: BoxDecoration(
+                    color: Colors.purple,
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    border: Border.all(
+                      width: 2,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  width: 50,
+                  height: 50,
+                ),
+              ],
             ),
-          ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.red,
+                ),
+                Container(
+                  width: 70,
+                  height: 70,
+                  color: Colors.black,
+                  // If Container has a child but no `height`, no `width`, child sizes itself to match the
+                  // size of parent.
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      color: Colors.green,
+                    ),
+                  ),
+                ),
+                Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.brown,
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
