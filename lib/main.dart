@@ -26,6 +26,52 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    // return Scaffold(
+    //   body: Center(
+    //     child: Container(
+    //       width: 200,
+    //       height: 200,
+    //       decoration: BoxDecoration(
+    //       // If we use decoration we must use color inside decoration, not in container
+    //         color: Colors.yellow,
+    //         borderRadius: BorderRadius.circular(10),
+    //         border: Border.all(
+    //           color: Colors.black,
+    //           width: 2,
+    //         ),
+    //       ),
+    //     ),
+    //   ),
+    // );
+
+    // return Scaffold(
+    //   body: Center(
+    //     child: Column(
+    //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    //       // Won't make affect because it takes only size of children
+    //       crossAxisAlignment: CrossAxisAlignment.center,
+    //       children: [
+    //         Container(
+    //           width: 50,
+    //           height: 50,
+    //           color: Colors.yellow,
+    //         ),
+    //         Container(
+    //           width: 50,
+    //           height: 50,
+    //           color: Colors.blue,
+    //         ),
+    //         Container(
+    //           width: 50,
+    //           height: 50,
+    //           color: Colors.green,
+    //         ),
+    //       ],
+    //     ),
+    //   ),
+    // );
+
     // return Scaffold(
     //   body: Center(
     //     child: Row(
